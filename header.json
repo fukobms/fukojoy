@@ -1,7 +1,7 @@
 {
 "name" : "fukojoy",
 "symbol" : "f",
-"data_url" : "https://script.google.com/macros/s/AKfycbwjzp0hQWrXZS9kebEtkAk_5uFL3sMr0njxRrJqeyY80lgPEtmLbM66tD2rrWf0bec/exec"
+"data_url" : "https://script.google.com/macros/s/AKfycbwjzp0hQWrXZS9kebEtkAk_5uFL3sMr0njxRrJqeyY80lgPEtmLbM66tD2rrWf0bec/exec",
 "course" :
   [
 {"name":"EXPERT COURSE Lv.1","constraint":["gauge_lr2",""],"md5": ["b10384a6973f3572c8219f3ac2011aba","7d77d0d78016cc99088a39f5506ce416","87fdc849fb93ade41cdbb8956cee46a0","2af37ac8096e58659f14d6af115591fa"]},

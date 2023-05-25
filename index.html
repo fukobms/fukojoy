@@ -55,7 +55,7 @@
                 var obj = $("#table_int");
 
                 obj.html("");
-                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>BPM</th><th>Notes</th><th>Chart View</th><th>Comment</th></tr></thead><tbody>")
+                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>BPM</th><th>Notes</th><th>Chart</th><th>Comment</th></tr></thead><tbody>")
                     .appendTo(obj);
                 var obj_sep = null;
                 for (var i = 0; i < info.length; i++) {
@@ -91,7 +91,7 @@
                     
                     // Chart Viewer
                     $("<td width='5%'>" +
-                        "<a href='http://www.ribbit.xyz/bms/score/view?md5=" + info[i].md5 + "' target='_blank'>" + "Viewer" + "</a></td>").appendTo(str);
+                        "<a href='http://www.ribbit.xyz/bms/score/view?md5=" + info[i].md5 + "' target='_blank'>" + "譜面" + "</a></td>").appendTo(str);
                     
                     // Comment
                     $("<td width='25%'>" + info[i].comment + "</td>").appendTo(str);

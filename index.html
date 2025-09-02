@@ -55,13 +55,13 @@
                 var obj = $("#table_int");
 
                 obj.html("");
-                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>BPM</th><th>Notes</th><th>譜面</th><th>属性</th><th>コメント</th></tr></thead><tbody>")
+                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>BPM</th><th>Notes</th><th>Total/Notes</th><th>譜面</th><th>属性</th><th>コメント</th></tr></thead><tbody>")
                     .appendTo(obj);
                 var obj_sep = null;
                 for (var i = 0; i < info.length; i++) {
                     if (x != info[i].level) {
                         if (obj_sep != null) {
-                            obj_sep.html("<td colspan='8'>" + "<b>" + mark + x + " (" + count +
+                            obj_sep.html("<td colspan='9'>" + "<b>" + mark + x + " (" + count +
                                 "譜面)</b></td>");
                         }
                         obj_sep = $("<tr class='table-dark' style='text-align:center' id='" + mark + info[i].level +
@@ -88,7 +88,10 @@
                     
                     // Notes
                     $("<td width='5%'>" + info[i].notes + "</td>").appendTo(str);
-                    
+
+                    // Total/Notes
+                    $("<td width='5%'>" + info[i].t/n + "</td>").appendTo(str);
+
                     // 譜面
                     $("<td width='5%'>" +
                         "<a href='https://bms-score-viewer.pages.dev/view?md5=" + info[i].md5 + "' target='_blank'>" + "譜面" + "</a></td>").appendTo(str);
@@ -97,7 +100,7 @@
                     $("<td width='15%'>" + info[i].type + "</td>").appendTo(str);
                     
                     // コメント
-                    $("<td width='20%'>" + info[i].comment + "</td>").appendTo(str);
+                    $("<td width='15%'>" + info[i].comment + "</td>").appendTo(str);
                     str.appendTo(obj);
                     count++;
 
@@ -105,7 +108,7 @@
                 $("</tbody>").appendTo(obj);
 
                 if (obj_sep != null) {
-                    obj_sep.html("<td class='table-dark' style='text-align:center' colspan='8'>" + "<b>" + mark + x +
+                    obj_sep.html("<td class='table-dark' style='text-align:center' colspan='9'>" + "<b>" + mark + x +
                         " (" + count + "譜面)</b></td>");
                 }
             }

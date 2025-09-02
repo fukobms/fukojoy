@@ -55,7 +55,7 @@
                 var obj = $("#table_int");
 
                 obj.html("");
-                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>BPM</th><th>Notes</th><th>Total/Notes</th><th>譜面</th><th>属性</th><th>コメント</th></tr></thead><tbody>")
+                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>BPM</th><th>Notes</th><th>T/N</th><th>譜面</th><th>属性</th><th>コメント</th></tr></thead><tbody>")
                     .appendTo(obj);
                 var obj_sep = null;
                 for (var i = 0; i < info.length; i++) {
@@ -89,7 +89,7 @@
                     // Notes
                     $("<td width='5%'>" + info[i].notes + "</td>").appendTo(str);
 
-                    // Total/Notes
+                    // T/N
                     $("<td width='5%'>" + info[i].t/n + "</td>").appendTo(str);
 
                     // 譜面
